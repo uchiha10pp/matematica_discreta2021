@@ -1,0 +1,35 @@
+... o crea un nuevo repositorio en la línea de comandos
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/uchiha10pp/matematica_discreta2021.git
+git push -u origin main
+
+
+
+... o enviar un repositorio existente desde la línea de comandos
+git remote add origin https://github.com/uchiha10pp/matematica_discreta2021.git
+git branch -M main
+git push -u origin main
+
+
+git status
+git add * 
+git pull
+git push
+
+
+
+--------
+You've added another git repository inside your current repository.
+
+Clones of the outer repository will not contain the contents of the embedded repository and will not know how to obtain it.
+
+If you meant to add a submodule, use:
+git submodule add <url> primera_tarea
+
+If you added this path by mistake, you can remove it from the index with:
+git rm --cached primera_tarea
+
+See "git help submodule" for more information.
