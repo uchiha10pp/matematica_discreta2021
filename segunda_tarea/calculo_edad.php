@@ -75,7 +75,7 @@
 		#MARTE = 1,88 años  365*1.88 =  686.688 días       (365)(14)/ 225 (venus) 
 		$marte = ($edad / 1.88);
 		round($marte, 3);
-		echo "<br>Tú tienes $marte años pinpoy@ si estuvieras en marte";
+		echo "<br><br>Tú tienes $marte años pinpoy@ si estuvieras en marte";
 
 		#JÚPITER = 11,86 años   4,331.983
 		$jupiter = ($edad / 11.86);
@@ -104,16 +104,69 @@
 
 		#VENUS = 224,7 días     || 0.615 año
 		$venus = ($edad * 365.26)/224.7; 
-		round($venus, 3); 
+		round($venus, 2); 
 		echo "<br>Tú tienes $venus años pinpoy@ si estuvieras en venus";
 
 
 
-
-		#MAYA                       13*28 = 364
+		#CALENDARIO MAYA                       13*28 = 364
 		$maya = ($edad*365.26)/364;
-		round($maya, 3);
-		echo "<br>Tú tienes $maya años pinpoy@ en el calendario maya";
+		round($maya, 2);
+		echo "<br><br>Tú tienes $maya años pinpoy@ en el calendario maya";
+
+
+
+		#CALENDARIO CHINO
+		$edad = $anioA - $anioN;
+
+		if ($mesA > 12 || $mesN > 12 || $diaA > 31 || $diaN > 31) {
+			echo "error al ingresar datos";
+		}else {			
+			
+			if ($mesN > $mesA) {
+				$edad = $edad -1;
+			} else {
+				if ($mesN == $mesA) {
+					if ($diaN < $diaA ||$diaN > $diaA) {
+						$edad = $edad -1;
+					}elseif ($diaN = $diaA) {
+						if ($mesN == 1 || $mesN == 2 || $mesA == 1 ||$mesA == 2) {
+							$edad = $edad + 2;
+						} else {
+							$edad = $edad + 1;
+						}
+					}
+
+				}else {
+					$edad = $edad -1;
+				}			
+			}
+			echo "<br><br>Tú tienes $edad años pinpoy@ según el calendario chino";
+		}
+
+		
+
+		#CALENDARIO LUNAR
+		$lunar = ($edad * 365.26) / 354;
+		round($lunar, 2);
+		echo "<br><br>Tú tienes $lunar años pinpoy@ en el calendario lunar";
+
+
+		#CALENDARIO JUDIO
+		$normal = 354;
+		$normal_b = 384;
+		$deficiente = 353;
+		$deficiente_b = 383;
+
+		$judio = ($edad * 365.26) / $normal;
+		echo "<br><br>Tú tienes $judio años pinpoy@ en el calendario judio normal";
+		$judio = ($edad * 365.26) / $normal_b;
+		echo "<br>Tú tienes $judio años pinpoy@ en el calendario judio normal bisiesto";
+
+		$judio = ($edad * 365.26) / $deficiente;
+		echo "<br>Tú tienes $judio años pinpoy@ en el calendario judio deficiente";
+		$judio = ($edad * 365.26) / $deficiente_b;
+		echo "<br>Tú tienes $judio años pinpoy@ en el calendario judio deficiente bisiesto";
 
 
 	}
