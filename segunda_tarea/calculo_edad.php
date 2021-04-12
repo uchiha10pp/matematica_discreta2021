@@ -29,7 +29,7 @@
 					<label>Ingrese año de nacimiento: </label>
 					<input type='number' name='an' required=''>
 					<br>	
-					<input type='submit' name='submit'>			
+					<input type='submit' name='submit'>
 			</form>
 		</div>
 	</body>
@@ -71,9 +71,51 @@
 			echo "<br>Tú tienes $edad años pinpoy@ según el calendario solar";
 		}
 
-		
+  
+		#MARTE = 1,88 años  365*1.88 =  686.688 días       (365)(14)/ 225 (venus) 
+		$marte = ($edad / 1.88);
+		round($marte, 3);
+		echo "<br>Tú tienes $marte años pinpoy@ si estuvieras en marte";
 
-		
+		#JÚPITER = 11,86 años   4,331.983
+		$jupiter = ($edad / 11.86);
+		round($jupiter, 3); 
+		echo "<br>Tú tienes $jupiter años pinpoy@ si estuvieras en jupiter";
+
+		#URANO = 84,01 años 
+		$urano = ($edad / 84.01); 
+		round($urano, 3); 
+		echo "<br>Tú tienes $urano años pinpoy@ si estuvieras en urano";
+
+		#NEPTUNO = 164,79 años
+		$neptuno = ($edad / 164.79);  
+		round($neptuno,3); 
+		echo "<br>Tú tienes $neptuno años pinpoy@ si estuvieras en neptuno";
+
+		#PLUTÓN 248,59 años 
+		$pluton = ($edad / 248.59); 
+		round($pluton, 3); 
+		echo "<br>Tú tienes $pluton años pinpoy@ si estuvieras en pluton";
+
+		#MERCURIO = 87,97 días   || 0.240 año
+		$mercurio = ($edad * 365.26)/87.97;
+		round($mercurio, 3); 
+		echo "<br>Tú tienes $mercurio años pinpoy@ si estuvieras en mercurio";
+
+		#VENUS = 224,7 días     || 0.615 año
+		$venus = ($edad * 365.26)/224.7; 
+		round($venus, 3); 
+		echo "<br>Tú tienes $venus años pinpoy@ si estuvieras en venus";
+
+
+
+
+		#MAYA                       13*28 = 364
+		$maya = ($edad*365.26)/364;
+		round($maya, 3);
+		echo "<br>Tú tienes $maya años pinpoy@ en el calendario maya";
+
+
 	}
 
 
@@ -107,6 +149,21 @@
 	24               = 2
 	36               = 3
 	48               = 4
+
+	MARTE = 1,88 años                           686.688  Días          marte * edad = 
+	JÚPITER = 11,86 años                      4,331.983       
+	SATURNO = 29,46 años                     10,760.559        
+	URANO = 84,01 años                       30,685.492
+	NEPTUNO = 164,79 años                    60,191.195
+	PLUTÓN 248,59 años                       90,799.983
+
+	MERCURIO = 87,97 días                         87/365             0.240   
+	VENUS = 224,7 días                         224.7/365.26          0.615
+	TIERRA = 365,26 días                           1año
+
+182.63/
+	A_A - A_N = EDAD
+	2021 - 2000 = 21 * 365  =       
 
 */
 
