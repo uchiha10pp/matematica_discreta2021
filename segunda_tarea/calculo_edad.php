@@ -32,11 +32,9 @@
 					<input type='submit' name='submit'>
 			</form>
 		</div>
-	</body>
-</html>
 
-
-<?php 
+		<div class="form">
+			<?php 
 	
 
 	if ($_POST) {
@@ -68,51 +66,44 @@
 					$edad = $edad -1;
 				}			
 			}
-			echo "<br>Tú tienes $edad años pinpoy@ según el calendario solar";
+			echo "<table border='1'>";
+			echo "<td><br>Tú tienes $edad años pinpoy@ según el calendario solar<br><br><br></tr></td>";
 		}
 
   
 		#MARTE = 1,88 años  365*1.88 =  686.688 días       (365)(14)/ 225 (venus) 
 		$marte = ($edad / 1.88);
-		round($marte, 3);
-		echo "<br><br>Tú tienes $marte años pinpoy@ si estuvieras en marte";
+		echo "<tr><td><br><br>Tú tienes ".round($marte, 2)." años pinpoy@ si estuvieras en marte<br>";
 
 		#JÚPITER = 11,86 años   4,331.983
 		$jupiter = ($edad / 11.86);
-		round($jupiter, 3); 
-		echo "<br>Tú tienes $jupiter años pinpoy@ si estuvieras en jupiter";
+		echo "Tú tienes ".round($jupiter, 2)." años pinpoy@ si estuvieras en jupiter<br>";
 
 		#URANO = 84,01 años 
 		$urano = ($edad / 84.01); 
-		round($urano, 3); 
-		echo "<br>Tú tienes $urano años pinpoy@ si estuvieras en urano";
+		echo "Tú tienes ".round($urano, 2)." años pinpoy@ si estuvieras en urano<br>";
 
 		#NEPTUNO = 164,79 años
 		$neptuno = ($edad / 164.79);  
-		round($neptuno,3); 
-		echo "<br>Tú tienes $neptuno años pinpoy@ si estuvieras en neptuno";
+		echo "Tú tienes ".round($neptuno, 2)." años pinpoy@ si estuvieras en neptuno<br>";
 
 		#PLUTÓN 248,59 años 
 		$pluton = ($edad / 248.59); 
-		round($pluton, 3); 
-		echo "<br>Tú tienes $pluton años pinpoy@ si estuvieras en pluton";
+		echo "Tú tienes ".round($pluton, 2)." años pinpoy@ si estuvieras en pluton<br>";
 
 		#MERCURIO = 87,97 días   || 0.240 año
 		$mercurio = ($edad * 365.26)/87.97;
-		round($mercurio, 3); 
-		echo "<br>Tú tienes $mercurio años pinpoy@ si estuvieras en mercurio";
+		echo "Tú tienes ".round($mercurio, 2)." años pinpoy@ si estuvieras en mercurio<br>";
 
 		#VENUS = 224,7 días     || 0.615 año
 		$venus = ($edad * 365.26)/224.7; 
-		round($venus, 2); 
-		echo "<br>Tú tienes $venus años pinpoy@ si estuvieras en venus";
+		echo "Tú tienes ".round($venus, 2)." años pinpoy@ si estuvieras en venus<br><br><br></tr></td>";
 
 
 
 		#CALENDARIO MAYA                       13*28 = 364
 		$maya = ($edad*365.26)/364;
-		round($maya, 2);
-		echo "<br><br>Tú tienes $maya años pinpoy@ en el calendario maya";
+		echo "<tr><td><br><br>Tú tienes ".round($maya, 2)." años pinpoy@ en el calendario maya<br><br><br></tr></td>";
 
 
 
@@ -141,15 +132,14 @@
 					$edad = $edad -1;
 				}			
 			}
-			echo "<br><br>Tú tienes $edad años pinpoy@ según el calendario chino";
+			echo "<tr><td><br><br>Tú tienes $edad años pinpoy@ según el calendario chino<br><br><br></tr></td>";
 		}
 
 		
 
 		#CALENDARIO LUNAR
 		$lunar = ($edad * 365.26) / 354;
-		round($lunar, 2);
-		echo "<br><br>Tú tienes $lunar años pinpoy@ en el calendario lunar";
+		echo "<tr><td><br><br>Tú tienes ".round($lunar, 2)." años pinpoy@ en el calendario lunar<br><br><br></tr></td>";
 
 
 		#CALENDARIO JUDIO
@@ -159,17 +149,22 @@
 		$deficiente_b = 383;
 
 		$judio = ($edad * 365.26) / $normal;
-		echo "<br><br>Tú tienes $judio años pinpoy@ en el calendario judio normal";
+		echo "<tr><td><br><br>Tú tienes ".round($judio, 2)." años pinpoy@ en el calendario judio normal<br>";
 		$judio = ($edad * 365.26) / $normal_b;
-		echo "<br>Tú tienes $judio años pinpoy@ en el calendario judio normal bisiesto";
+		echo "Tú tienes ".round($judio, 2)." años pinpoy@ en el calendario judio normal bisiesto<br>";
 
 		$judio = ($edad * 365.26) / $deficiente;
-		echo "<br>Tú tienes $judio años pinpoy@ en el calendario judio deficiente";
+		echo "Tú tienes ".round($judio, 2)." años pinpoy@ en el calendario judio deficiente<br>";
 		$judio = ($edad * 365.26) / $deficiente_b;
-		echo "<br>Tú tienes $judio años pinpoy@ en el calendario judio deficiente bisiesto";
+		echo "Tú tienes ".round($judio, 2)." años pinpoy@ en el calendario judio deficiente bisiesto<br><br><br></tr></td>";
 
 
 	}
+	?>
+		</div>
+
+	</body>
+</html>
 
 
 
@@ -182,6 +177,8 @@
 
 
 
+
+<?php 
 
 /*
 
